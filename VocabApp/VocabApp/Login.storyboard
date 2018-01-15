@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Jg-l9-u9L">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login Page View Controller-->
+        <scene sceneID="wNU-8v-jnr">
+            <objects>
+                <viewController id="7Jg-l9-u9L" customClass="LoginPageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M3g-dK-0kk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="UrT-D3-pqy">
+                                <rect key="frame" x="0.0" y="100" width="375" height="409"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gd8-kQ-vMv">
+                                        <rect key="frame" x="5" y="0.0" width="365" height="113"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xI7-4v-pay">
+                                        <rect key="frame" x="20" y="153" width="335" height="110"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IDを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cm8-wK-prG">
+                                                <rect key="frame" x="10" y="0.0" width="315" height="55"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワードを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VvI-HD-8zx">
+                                                <rect key="frame" x="10" y="55" width="315" height="55"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="VvI-HD-8zx" secondAttribute="trailing" constant="10" id="AJU-CA-BSQ"/>
+                                            <constraint firstItem="VvI-HD-8zx" firstAttribute="leading" secondItem="xI7-4v-pay" secondAttribute="leading" constant="10" id="Fvz-47-jFv"/>
+                                            <constraint firstAttribute="trailing" secondItem="cm8-wK-prG" secondAttribute="trailing" constant="10" id="Hq0-Z9-xyW"/>
+                                            <constraint firstAttribute="height" constant="110" id="cxE-NX-tUG"/>
+                                            <constraint firstItem="cm8-wK-prG" firstAttribute="leading" secondItem="xI7-4v-pay" secondAttribute="leading" constant="10" id="li9-Df-vYX"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWM-MY-qJ2">
+                                        <rect key="frame" x="136.5" y="303" width="102" height="106"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="ログイン">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginBtn:" destination="7Jg-l9-u9L" eventType="touchUpInside" id="YfZ-uT-jHN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xI7-4v-pay" firstAttribute="leading" secondItem="UrT-D3-pqy" secondAttribute="leading" constant="20" id="F7m-tj-oxB"/>
+                                    <constraint firstItem="Gd8-kQ-vMv" firstAttribute="leading" secondItem="UrT-D3-pqy" secondAttribute="leading" constant="5" id="Ied-EQ-SOh"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gd8-kQ-vMv" secondAttribute="trailing" constant="5" id="Zg2-pX-HzV"/>
+                                    <constraint firstAttribute="trailing" secondItem="xI7-4v-pay" secondAttribute="trailing" constant="20" id="kQk-UF-LV2"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UrT-D3-pqy" firstAttribute="top" secondItem="1Ev-do-Hpa" secondAttribute="top" constant="80" id="Uwv-bl-RLk"/>
+                            <constraint firstItem="1Ev-do-Hpa" firstAttribute="bottom" secondItem="UrT-D3-pqy" secondAttribute="bottom" constant="158" id="VZG-QB-YYu"/>
+                            <constraint firstItem="UrT-D3-pqy" firstAttribute="leading" secondItem="1Ev-do-Hpa" secondAttribute="leading" id="eaC-lJ-Kpt"/>
+                            <constraint firstItem="1Ev-do-Hpa" firstAttribute="trailing" secondItem="UrT-D3-pqy" secondAttribute="trailing" id="mI9-s3-nxt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Ev-do-Hpa"/>
+                    </view>
+                    <connections>
+                        <outlet property="IDTextField" destination="cm8-wK-prG" id="dI1-dX-Pzf"/>
+                        <outlet property="bannerImageView" destination="Gd8-kQ-vMv" id="aK0-sh-SSD"/>
+                        <outlet property="passwordTextField" destination="VvI-HD-8zx" id="lVn-yB-MPb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gea-VY-fsR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="284" y="-495.20239880059972"/>
+        </scene>
+    </scenes>
+</document>
